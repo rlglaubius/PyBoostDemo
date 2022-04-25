@@ -38,7 +38,7 @@ public:
 
 	// The model will store outcomes for discrete (unit) times first_time >= t >= final_time.
 	// The user is responsible for specifying rate per unit time
-	SIR(const int first_time, const int final_time);
+	SIR(const size_t first_time, const size_t final_time);
 	~SIR();
 
 	// convenience function: set all the inputs at once
@@ -52,7 +52,7 @@ public:
 		const double num_recovered);
 
 	void calculate();
-	void calculate(int t);
+	void calculate(size_t t);
 
 	// Getters
 	double rateEnter() const { return _rate_enter; }
@@ -67,8 +67,8 @@ public:
 	void rateRecover(const double rate_recover) { _rate_recover = rate_recover; }
 
 	// Check population sizes and event counts
-	inline double state_count(const int t, const state_t x) const { return _state->get(t - _first_time, x); }
-	inline double event_count(const int t, const event_t e) const { return _event->get(t - _first_time, e); }
+	inline double state_count(const size_t t, const state_t x) const { return _state->get(t - _first_time, x); }
+	inline double event_count(const size_t t, const event_t e) const { return _event->get(t - _first_time, e); }
 
 private:
 	int _final_time;

@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "SIR.H"
 
-SIR::SIR(const int first_time, const int final_time) :
+SIR::SIR(const size_t first_time, const size_t final_time) :
 	_first_time(first_time),
 	_final_time(final_time),
 	_num_units(final_time - first_time + 1),
@@ -44,12 +44,12 @@ void SIR::initialize(
 }
 
 void SIR::calculate() {
-	for (int t(1); t < _num_units; ++t) {
+	for (size_t t(1); t < _num_units; ++t) {
 		calculate(t);
 	}
 }
 
-void SIR::calculate(int t) {
+void SIR::calculate(size_t t) {
 	double force, popsize;
 	double dstate[NUM_STATES] = { 0.0, 0.0, 0.0 };
 	double devent[NUM_EVENTS] = { 0.0, 0.0, 0.0, 0.0 };
