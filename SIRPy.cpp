@@ -11,7 +11,7 @@
 // SIR class; that function takes an int as an argument and returns nothing).
 //
 // We also rename enums, so that (e.g.) Python State.SUSCEPTIBLE correponds to C++ SIR::STATE_SUS. If we kept
-// C++ names as-is, the Python calling convention would include painful redundandancies (e.g., Event.EVENT_ENTER)
+// C++ names as-is, Python code would include painful redundandancies (e.g., Event.EVENT_ENTER)
 BOOST_PYTHON_MODULE(PyBoostDemo) {
 	boost::python::class_<SIR>("SIR", boost::python::init<int,int>())
 		.def("initialize", &SIR::initialize)
