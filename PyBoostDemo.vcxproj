@@ -94,13 +94,13 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Proj\Util\boost_1_79_0;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Proj\Util\boost_1_79_0;$(LOCALAPPDATA)\Programs\Python\Python310\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Proj\Util\boost_1_79_0\stage\lib;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\DLLs;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\Lib;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\libs;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\tcl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Proj\Util\boost_1_79_0\stage\lib;$(LOCALAPPDATA)\Programs\Python\Python310\DLLs;$(LOCALAPPDATA)\Programs\Python\Python310\Lib;$(LOCALAPPDATA)\Programs\Python\Python310\libs;$(LOCALAPPDATA)\Programs\Python\Python310\tcl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -113,7 +113,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Proj\Util\boost_1_79_0;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Proj\Util\boost_1_79_0;$(LOCALAPPDATA)\Programs\Python\Python310\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -121,7 +121,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Proj\Util\boost_1_79_0\stage\lib;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\DLLs;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\Lib;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\libs;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\tcl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Proj\Util\boost_1_79_0\stage\lib;$(LOCALAPPDATA)\Programs\Python\Python310\DLLs;$(LOCALAPPDATA)\Programs\Python\Python310\Lib;$(LOCALAPPDATA)\Programs\Python\Python310\libs;$(LOCALAPPDATA)\Programs\Python\Python310\tcl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -132,13 +132,13 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Proj\Util\boost_1_79_0;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Proj\Util\boost_1_79_0;$(LOCALAPPDATA)\Programs\Python\Python310\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Proj\Util\boost_1_79_0\stage\lib;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\DLLs;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\Lib;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\libs;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\tcl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Proj\Util\boost_1_79_0\stage\lib;$(LOCALAPPDATA)\Programs\Python\Python310\DLLs;$(LOCALAPPDATA)\Programs\Python\Python310\Lib;$(LOCALAPPDATA)\Programs\Python\Python310\libs;$(LOCALAPPDATA)\Programs\Python\Python310\tcl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -151,7 +151,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Proj\Util\boost_1_79_0;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Proj\Util\boost_1_79_0;$(LOCALAPPDATA)\Programs\Python\Python310\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -159,7 +159,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Proj\Util\boost_1_79_0\stage\lib;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\DLLs;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\Lib;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\libs;C:\Users\RobertGlaubius\AppData\Local\Programs\Python\Python310\tcl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Proj\Util\boost_1_79_0\stage\lib;$(LOCALAPPDATA)\Programs\Python\Python310\DLLs;$(LOCALAPPDATA)\Programs\Python\Python310\Lib;$(LOCALAPPDATA)\Programs\Python\Python310\libs;$(LOCALAPPDATA)\Programs\Python\Python310\tcl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
