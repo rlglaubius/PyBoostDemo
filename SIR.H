@@ -71,9 +71,9 @@ public:
 	inline double event_count(const size_t t, const event_t e) const { return _event->get(t - _first_time, e); }
 
 private:
-	int _final_time;
-	int _first_time;
-	int _num_units;    // number of unit time intervals between _first_time and _final_time (inclusive)
+	size_t _final_time;
+	size_t _first_time;
+	size_t _num_units;    // number of unit time intervals between _first_time and _final_time (inclusive)
 	int _num_steps;    // number of time steps per unit time
 	double _step_size; // time step duration as a fraction of unit time
 
