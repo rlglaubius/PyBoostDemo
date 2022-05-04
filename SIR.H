@@ -1,23 +1,7 @@
-#pragma once
+#ifndef SIR_H
+#define SIR_H
 
 #include <boost/multi_array.hpp>
-
-class Array2D {
-public:
-	Array2D(const size_t ni, const size_t nj) : _values(boost::extents[ni][nj]) {}
-	~Array2D() {}
-
-	// Accessors
-	inline double get(const size_t i, const size_t j) { return _values[i][j]; }
-	inline void set(const size_t i, const size_t j, const double v) { _values[i][j] = v; }
-
-	// Operator-based accessors
-	inline double operator()(const size_t i, const size_t j) const { return _values[i][j]; } // enables double y; Array2D X(n,m); y = X(i,j);
-	inline double& operator()(const size_t i, const size_t j) { return _values[i][j]; }      // enables double y; Array2D X(n,m); X(i,j) = y;
-
-private:
-	boost::multi_array<double, 2> _values;
-};
 
 class SIR {
 public:
@@ -38,7 +22,12 @@ public:
 
 	// The model will store outcomes for discrete (unit) times first_time >= t >= final_time.
 	// The user is responsible for specifying rate per unit time
-	SIR(const size_t first_time, const size_t final_time);
+	//
+	// The client application is responsible for managing storage used by SIR instances
+	// - work_state is used to store compartment sizes. Size must be at least (final_time - first_time + 1) * 3
+	// - work_event is used to store event counts. Size must be at least (final_time - first_time + 1) * 4
+	// WARNING: memory access violations are likely if these are not sized correctly
+	SIR(const size_t first_time, const size_t final_time, double* const work_state, double* const work_event);
 	~SIR();
 
 	// convenience function: set all the inputs at once
@@ -67,13 +56,13 @@ public:
 	void rateRecover(const double rate_recover) { _rate_recover = rate_recover; }
 
 	// Check population sizes and event counts
-	inline double state_count(const size_t t, const state_t x) const { return _state->get(t - _first_time, x); }
-	inline double event_count(const size_t t, const event_t e) const { return _event->get(t - _first_time, e); }
+	inline double state_count(const size_t t, const state_t x) const { return _state[t - _first_time][x]; }
+	inline double event_count(const size_t t, const event_t e) const { return _event[t - _first_time][e]; }
 
 private:
 	size_t _final_time;
 	size_t _first_time;
-	size_t _num_units;    // number of unit time intervals between _first_time and _final_time (inclusive)
+	size_t _num_units; // number of unit time intervals between _first_time and _final_time (inclusive)
 	int _num_steps;    // number of time steps per unit time
 	double _step_size; // time step duration as a fraction of unit time
 
@@ -82,6 +71,8 @@ private:
 	double _rate_transmit;
 	double _rate_recover;
 
-	Array2D* _state;
-	Array2D* _event;
+	boost::multi_array_ref<double, 2> _state;
+	boost::multi_array_ref<double, 2> _event;
 };
+
+#endif // SIR_H
